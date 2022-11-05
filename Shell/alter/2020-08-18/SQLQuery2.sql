@@ -1,0 +1,2 @@
+--import database
+--update Statics set CurrentShift=0

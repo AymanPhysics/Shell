@@ -1,0 +1,1 @@
+alter table stores add CustAccNo nvarchar(100)

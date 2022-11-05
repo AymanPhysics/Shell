@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="TanksInventory"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+                    d:DesignHeight="527.014" d:DesignWidth="1070.815" xmlns:my="clr-namespace:DNBSoft.WPF.RibbonControl;assembly=RibbonControl">
+    <Grid Background="{DynamicResource Bg}">
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0" />
+                    <GradientStop Color="#FF8DD8A4" Offset="1" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <WindowsFormsHost Margin="10,43,10,259" Name="WFH" Background="{x:Null}" TabIndex="333">
+
+
+            </WindowsFormsHost>
+            <Button Background="{DynamicResource BgSave}"  Content="أول" HorizontalAlignment="Right"  Margin="0,0,506,10" Name="btnFirst" TabIndex="104" VerticalAlignment="Bottom" Width="72" />
+            <Button Background="{DynamicResource BgSave}"  Content="سابق" HorizontalAlignment="Right"  Margin="0,0,428,10" Name="btnPrevios" TabIndex="105" VerticalAlignment="Bottom" Width="72" />
+            <Button Background="{DynamicResource BgSave}"  Content="تالى" HorizontalAlignment="Right"  Margin="0,0,351,10" Name="btnNext" TabIndex="106" VerticalAlignment="Bottom" Width="72" />
+            <Button Background="{DynamicResource BgSave}"  Content="أخير" HorizontalAlignment="Right"  Margin="0,0,274,10" Name="btnLast" TabIndex="107" VerticalAlignment="Bottom" Width="72" />
+            <Button  Content="حفظ" HorizontalAlignment="Right"  Margin="0,0,428,54" Name="btnSave" TabIndex="101" VerticalAlignment="Bottom" Width="150" Background="{DynamicResource BgSave}"/>
+            <Button  Content="جديد" HorizontalAlignment="Right"  Margin="0,0,351,54" Name="btnNew" TabIndex="102" VerticalAlignment="Bottom" Width="72" Background="{DynamicResource BgNew}"/>
+            <Button  Content="مسح" HorizontalAlignment="Right"  Margin="0,0,274,54" Name="btnDelete" TabIndex="103" VerticalAlignment="Bottom" Width="72" Background="{DynamicResource BgDelete}"/>
+            <TextBox AutoWordSelection="True" Height="12" HorizontalAlignment="Center" Margin="633,-1,9,0" MaxLength="1000" Name="txtFlag" TabIndex="6" VerticalAlignment="Top" Visibility="Hidden" Width="23">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="التاريخ" Foreground="#FF078200" Height="28" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="10,10,931,0" Name="lblDayDate" UseLayoutRounding="True" VerticalAlignment="Top" Width="120" />
+            <DatePicker FirstDayOfWeek="Saturday" Height="28" HorizontalAlignment="Center" Margin="132,10,801,0" Name="DayDate" TabIndex="2" VerticalAlignment="Top" Width="128" />
+            <ComboBox Height="28" HorizontalAlignment="Center" IsSynchronizedWithCurrentItem="{x:Null}" Margin="388,10,577,0" Name="Shift" TabIndex="3" VerticalAlignment="Top" Width="96" IsEditable="False">
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </ComboBox.Background>
+            </ComboBox>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="الوردية" Foreground="#FF078200" Height="28" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="312,10,677,0" Name="lblShift" UseLayoutRounding="True" VerticalAlignment="Top" Width="72" />
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="ملاحظات" Foreground="#FF078200" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="264,0,0,226" Name="lblNotes" UseLayoutRounding="True" VerticalAlignment="Bottom" Width="120" />
+            <TextBox AutoWordSelection="True" Height="28" MaxLength="1000" Name="Notes" TabIndex="10" VerticalAlignment="Bottom" Margin="388,0,7,226" HorizontalAlignment="Stretch">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Button  Content="         حفظ&#xA;           --&#xA;فتح المبيعات" HorizontalAlignment="Right"  Margin="0,0,56,10" x:Name="btnSave2" TabIndex="101" VerticalAlignment="Bottom" Width="203" Background="{DynamicResource BgSave}" Height="82"/>
+            <TextBox AutoWordSelection="True" Height="28" HorizontalAlignment="Center" IsReadOnly="True" IsTabStop="False" Margin="690,10,209,0" MaxLength="100" x:Name="ToName" TabIndex="1" VerticalAlignment="Top" Width="162">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="المورد" Foreground="#FF078200" Height="28" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="499,10,442,0" x:Name="lblToId" UseLayoutRounding="True" VerticalAlignment="Top" Width="120" TabIndex="5"/>
+            <TextBox AutoWordSelection="True" Height="28" HorizontalAlignment="Center" Margin="623,10,376,0" MaxLength="10" x:Name="ToId" TabIndex="8" VerticalAlignment="Top" Width="62" IsEnabled="False" >
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <WindowsFormsHost Margin="10,0,603,54" x:Name="WFH2" Background="{x:Null}" TabIndex="333" Height="167" VerticalAlignment="Bottom"/>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="" Foreground="#FF078200" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="10,0,0,226" x:Name="lblName" UseLayoutRounding="True" VerticalAlignment="Bottom" Width="249"  FontWeight="Black" />
+            <Button  Content="حفظ" HorizontalAlignment="Right"  Margin="0,0,901,10" x:Name="btnSaveSub" TabIndex="101" VerticalAlignment="Bottom" Width="150" Background="{DynamicResource BgSave}"/>
+        </Grid >
+
+    </Grid>
+</UserControl>

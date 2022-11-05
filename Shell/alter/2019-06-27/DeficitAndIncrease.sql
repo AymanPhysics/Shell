@@ -1,0 +1,1 @@
+alter table DeficitAndIncrease  add BankId int not null default 0

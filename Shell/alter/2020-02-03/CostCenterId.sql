@@ -1,0 +1,1 @@
+alter table Stores add CostCenterId bigint not null default 0

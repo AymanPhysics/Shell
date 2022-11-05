@@ -1,0 +1,1 @@
+alter table ItemsPrices add Bonus float

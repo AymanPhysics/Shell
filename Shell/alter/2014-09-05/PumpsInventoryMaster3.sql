@@ -1,0 +1,1 @@
+alter table PumpsInventoryMaster add Total float
